@@ -161,7 +161,26 @@ app.post('/api/chat', async (req, res) => {
     res.json({ response: finalResponseText });
   } catch (error: any) {
     console.error('Chat error:', error);
-    res.status(500).json({ error: error.message || 'Internal server error' });
+    
+    const errorMessage = error.message || '';
+    
+    // Check for 429 Quota Exceeded error
+    if (errorMessage.includes('429') || errorMessage.includes('Quota exceeded')) {
+      // Extract retry time if available in the error string
+      const retryMatch = errorMessage.match(/retry in ([\d.]+)s/);
+      let waitText = 'a few moments';
+      
+      if (retryMatch && retryMatch[1]) {
+        const seconds = Math.ceil(parseFloat(retryMatch[1]));
+        waitText = seconds > 60 ? `${Math.ceil(seconds/60)} minutes` : `${seconds} seconds`;
+      }
+      
+      return res.status(429).json({ 
+        error: `Our AI is currently experiencing high demand and has reached its quota limit. Please retry in ${waitText}.` 
+      });
+    }
+
+    res.status(500).json({ error: 'Internal server error. Please try again later.' });
   }
 });
 

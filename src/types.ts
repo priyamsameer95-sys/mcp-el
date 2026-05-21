@@ -62,24 +62,50 @@ export interface OverallScoreResult {
   coapplicant_score: BucketScore;
 }
 
+// Institution matching status
+export interface InstitutionStatus {
+  is_primary: boolean | null;
+  mode: string;
+  product_tier: string | null;
+  note: string;
+}
+
+// A single loan option (Secured or Unsecured)
+export interface LoanOption {
+  loan_type: LoanType;
+  available: boolean;
+  indicative_roi: string | null;
+  loan_range: { min: number; max: number } | { min: null; max: null };
+  collateral_required: boolean;
+  ltv?: {
+    collateral_type: string;
+    collateral_value: number;
+    ltv_ratio: number;
+    max_loan_on_collateral: number;
+  } | null;
+  note: string | null;
+}
+
 // Eligible lender output
 export interface EligibleLender {
   lender_name: string;
   lender_type: LenderType;
-  eligibility: 'Eligible';
-  knockout_reason: null;
-  loan_type: LoanType;
-  eligible_loan_range: { min: number; max: number };
-  indicative_rate_range: { min: number; max: number };
+  institution_status: InstitutionStatus;
+  recommended: {
+    loan_type: LoanType;
+    indicative_roi: string | null;
+    loan_range: { min: number | null; max: number | null };
+    collateral_required: boolean;
+  };
+  all_options: LoanOption[];
   processing_fee: string;
   moratorium: string;
-  ltv_ratio: number | null;
 }
 
 export interface IneligibleLender {
   lender_name: string;
   lender_type: LenderType;
-  knockout_reason: string;
+  knockout_reasons: string[];
 }
 
 export interface EvaluateProfileOutput {

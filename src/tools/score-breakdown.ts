@@ -1,5 +1,5 @@
 import { scoreProfile } from '../scoring/overall-scorer.js';
-import { checkKnockouts } from '../knockout/knockout-engine.js';
+import { checkHardKnockouts } from '../knockout/knockout-engine.js';
 import { getLenders } from '../utils/data-loader.js';
 import type { EvaluateProfileInput } from '../types.js';
 
@@ -8,12 +8,15 @@ export async function handleScoreBreakdown(args: EvaluateProfileInput) {
   const lenders = getLenders();
 
   // Build per-lender knockout trace
-  const lenderTrace = lenders.map(lender => ({
-    lender_name: lender.name,
-    lender_type: lender.type,
-    knockout_reason: checkKnockouts(args, lender),
-    eligible: checkKnockouts(args, lender) === null,
-  }));
+  const lenderTrace = lenders.map(lender => {
+    const reasons = checkHardKnockouts(args, lender);
+    return {
+      lender_name: lender.name,
+      lender_type: lender.type,
+      knockout_reasons: reasons,
+      eligible: reasons.length === 0,
+    };
+  });
 
   const output = {
     overall_profile_score: scoreResult.overall_profile_score,

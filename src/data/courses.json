@@ -1,0 +1,78 @@
+{
+  "course_levels": [
+    "UG",
+    "PG"
+  ],
+  "course_types": [
+    {
+      "code": "STEM",
+      "name": "Science, Technology, Engineering, Mathematics",
+      "examples": [
+        "Computer Science",
+        "Mechanical Engineering",
+        "Data Science",
+        "Physics",
+        "Biotechnology"
+      ]
+    },
+    {
+      "code": "MBA",
+      "name": "Business Administration",
+      "examples": [
+        "MBA",
+        "Executive MBA",
+        "Business Analytics"
+      ]
+    },
+    {
+      "code": "Medicine",
+      "name": "Medical Sciences",
+      "examples": [
+        "MBBS",
+        "MD",
+        "Dentistry",
+        "Pharmacy",
+        "Nursing"
+      ]
+    },
+    {
+      "code": "Management",
+      "name": "Management & Business",
+      "examples": [
+        "Finance",
+        "Marketing",
+        "HR",
+        "Operations"
+      ]
+    },
+    {
+      "code": "Humanities",
+      "name": "Humanities & Social Sciences",
+      "examples": [
+        "Psychology",
+        "Economics",
+        "Political Science",
+        "Sociology"
+      ]
+    },
+    {
+      "code": "Law",
+      "name": "Legal Studies",
+      "examples": [
+        "LLM",
+        "JD",
+        "International Law"
+      ]
+    },
+    {
+      "code": "Arts",
+      "name": "Arts & Design",
+      "examples": [
+        "Fine Arts",
+        "Architecture",
+        "Film",
+        "Music"
+      ]
+    }
+  ]
+}

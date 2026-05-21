@@ -1,0 +1,5 @@
+node_modules/
+dist/
+scratch/extracted_mcp/
+.env
+.DS_Store

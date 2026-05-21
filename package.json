@@ -1,0 +1,37 @@
+{
+  "name": "eduloans-bre-mcp",
+  "version": "1.0.0",
+  "description": "Education Loan BRE (Business Rule Engine) MCP Server — evaluate student loan eligibility, get lender matches, and scoring breakdowns",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "eduloans-bre-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node scratch/copy-data.mjs",
+    "start": "node dist/index.js",
+    "start:stdio": "node dist/index.js --stdio",
+    "dev": "tsx src/index.ts",
+    "extract-data": "node scratch/extract-data.mjs",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "education-loan",
+    "bre",
+    "fintech"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "fuse.js": "^7.3.0",
+    "zod": "^3.25.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.19",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

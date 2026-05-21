@@ -1,0 +1,58 @@
+{
+  "offered": [
+    "USA",
+    "UK",
+    "Canada",
+    "Australia",
+    "Singapore",
+    "Japan",
+    "Hong Kong",
+    "New Zealand",
+    "Austria",
+    "Belgium",
+    "Czech Republic",
+    "Denmark",
+    "Estonia",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Ireland",
+    "Italy",
+    "Netherlands",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Spain",
+    "Sweden",
+    "Switzerland"
+  ],
+  "blocked": [
+    "Russia",
+    "China",
+    "Georgia",
+    "Uzbekistan",
+    "Kazakhstan",
+    "Ukraine"
+  ],
+  "partially_covered": {
+    "China": {
+      "covered_by": [
+        "Credila"
+      ],
+      "note": "Only Credila covers China"
+    },
+    "Georgia": {
+      "covered_by": [
+        "Credila"
+      ],
+      "note": "Only Credila covers Georgia"
+    },
+    "Uzbekistan": {
+      "covered_by": [
+        "Credila"
+      ],
+      "note": "Only Credila covers Uzbekistan"
+    }
+  }
+}

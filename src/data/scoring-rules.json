@@ -1,0 +1,233 @@
+{
+  "marks_to_points": [
+    {
+      "min": 90,
+      "max": 100,
+      "points": 100
+    },
+    {
+      "min": 80,
+      "max": 89.99,
+      "points": 90
+    },
+    {
+      "min": 70,
+      "max": 79.99,
+      "points": 80
+    },
+    {
+      "min": 60,
+      "max": 69.99,
+      "points": 70
+    },
+    {
+      "min": 50,
+      "max": 59.99,
+      "points": 60
+    },
+    {
+      "min": 0,
+      "max": 49.99,
+      "points": 0
+    }
+  ],
+  "qualification_to_points": {
+    "PhD": 100,
+    "CA": 100,
+    "CMA": 100,
+    "CS": 100,
+    "CFA": 100,
+    "Dr": 100,
+    "Masters": 90,
+    "MBA": 90,
+    "Bachelors": 80,
+    "Diploma": 60
+  },
+  "exam_to_points": {
+    "GRE": [
+      {
+        "min": 320,
+        "max": 340,
+        "points": 10
+      },
+      {
+        "min": 300,
+        "max": 319,
+        "points": 7
+      },
+      {
+        "min": 280,
+        "max": 299,
+        "points": 5
+      },
+      {
+        "min": 0,
+        "max": 279,
+        "points": 0
+      }
+    ],
+    "GMAT": [
+      {
+        "min": 700,
+        "max": 800,
+        "points": 10
+      },
+      {
+        "min": 650,
+        "max": 699,
+        "points": 7
+      },
+      {
+        "min": 600,
+        "max": 649,
+        "points": 5
+      },
+      {
+        "min": 0,
+        "max": 599,
+        "points": 0
+      }
+    ],
+    "IELTS": [
+      {
+        "min": 7.5,
+        "max": 9,
+        "points": 10
+      },
+      {
+        "min": 7,
+        "max": 7.49,
+        "points": 7
+      },
+      {
+        "min": 6.5,
+        "max": 6.99,
+        "points": 5
+      },
+      {
+        "min": 0,
+        "max": 6.49,
+        "points": 0
+      }
+    ],
+    "TOEFL": [
+      {
+        "min": 100,
+        "max": 120,
+        "points": 10
+      },
+      {
+        "min": 90,
+        "max": 99,
+        "points": 7
+      },
+      {
+        "min": 80,
+        "max": 89,
+        "points": 5
+      },
+      {
+        "min": 0,
+        "max": 79,
+        "points": 0
+      }
+    ]
+  },
+  "tier_to_points": {
+    "1": 100,
+    "2": 90,
+    "3": 80
+  },
+  "university_grade_bands": [
+    {
+      "rank_min": 1,
+      "rank_max": 15,
+      "grade": "A",
+      "points": 100
+    },
+    {
+      "rank_min": 16,
+      "rank_max": 50,
+      "grade": "B",
+      "points": 80
+    },
+    {
+      "rank_min": 51,
+      "rank_max": 200,
+      "grade": "C",
+      "points": 60
+    },
+    {
+      "rank_min": 201,
+      "rank_max": 999999,
+      "grade": "D",
+      "points": 40
+    }
+  ],
+  "relation_to_points": {
+    "Father": 100,
+    "Mother": 100,
+    "Spouse": 90,
+    "Brother": 70,
+    "Sister": 70,
+    "Others": 50
+  },
+  "employment_to_points": {
+    "Salaried": 100,
+    "Self Employed": 80,
+    "Agricultural Income": 60
+  },
+  "income_to_points": [
+    {
+      "min": 100000,
+      "max": 999999999,
+      "points": 100
+    },
+    {
+      "min": 75000,
+      "max": 99999,
+      "points": 90
+    },
+    {
+      "min": 50000,
+      "max": 74999,
+      "points": 80
+    },
+    {
+      "min": 30000,
+      "max": 49999,
+      "points": 60
+    },
+    {
+      "min": 15000,
+      "max": 29999,
+      "points": 40
+    },
+    {
+      "min": 0,
+      "max": 14999,
+      "points": 0
+    }
+  ],
+  "academic_weights": {
+    "marks_10th": 0.2,
+    "marks_12th": 0.2,
+    "marks_graduation": 0.2,
+    "highest_qualification": 0.2,
+    "student_pincode_tier": 0.1,
+    "exam_academic": 0.07,
+    "exam_language": 0.03
+  },
+  "coapplicant_weights": {
+    "relation": 0.25,
+    "employment_type": 0.25,
+    "income": 0.25,
+    "coapplicant_pincode_tier": 0.25
+  },
+  "overall_weights": {
+    "university": 0.1,
+    "academic": 0.7,
+    "coapplicant": 0.2
+  },
+  "pass_threshold": 60
+}
